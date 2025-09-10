@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="da" data-lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio for multimediedesign-studerende med fokus på frontend og webudvikling." />
+    <title>Persian Moradi - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Sticky, animeret navigation -->
+    <header class="site-header" id="header" aria-label="Hovednavigation">
+      <nav class="nav container" aria-label="Primær">
+        <a href="#hero" class="nav__brand" aria-label="Forside">PM</a>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Åbn menu">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
+        <div class="nav__actions" role="group" aria-label="Indstillinger">
+          <button class="btn btn--ghost btn--sm" id="themeToggle" aria-label="Skift tema" title="Skift tema">🌙</button>
+          <select id="langSelect" aria-label="Skift sprog" class="btn btn--sm" style="background: transparent; color: var(--accent); border-color: rgba(125, 211, 252, 0.3);">
+            <option value="da">DA</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#projects" data-i18n="nav.projects">Projekter</a></li>
+          <li><a href="#about" data-i18n="nav.about">Om mig</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero / Forside sektion -->
+    <main>
+      <section class="hero hero--fullscreen" id="hero" aria-label="Introduktion">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title"><span data-i18n="hero.firstName">Persian</span> <span class="accent" data-i18n="hero.lastName">Moradi</span></h1>
+            <p class="hero__subtitle" data-i18n="hero.subtitle">Multimediedesign-studerende · Frontend og webudvikling</p>
+            <p class="hero__intro" data-i18n="hero.intro">
+              Jeg skaber elegante, funktionelle og hurtige digitale oplevelser – fra idé og prototypning til frontend-implementering.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#projects" data-i18n="cta.viewProjects">Se projekter</a>
+              <a class="btn btn--ghost" href="#contact" data-i18n="cta.contactMe">Kontakt mig</a>
+            </div>
+          </div>
+          <div class="hero__visual">
+              <img src="img/IMG_1309.jpg" alt="Portræt" style="border-radius: 10px;" height="500px">
+          </div>
+        </div>
+      </section>
+
+      <!-- Projekter sektion -->
+      <section class="section" id="projects" aria-label="Projekter">
+        <div class="container container--wide">
+          <header class="section__header">
+            <h2 data-i18n="projects.title">Udvalgte projekter</h2>
+            <p data-i18n="projects.subtitle">Et udvalg fra 1 – 3 semester. Klik for detaljer eller demo.</p>
+          </header>
+
+          <div class="projects__grid">
+            <!-- Projektkort eksempel 1 -->
+            <article class="card project" tabindex="0">
+              <div class="card__media">
+                <img src="img/wordpress-img" alt="Wordpress Website" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" data-i18n="projects.wp.title">Wordpress Website - 2 semester</h3>
+                <p class="card__desc" data-i18n="projects.wp.desc">Design et WordPress website til en håndværker - Flow 1 projekt</p>
+                <div class="card__actions">
+                  <a class="btn btn--sm btn--ghost" href="https://flow1-sem2.tocado.dk/" aria-label="Åbn prototype" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projektkort eksempel 2 -->
+            <article class="card project" tabindex="0">
+              <div class="card__media">
+                <img src="img/naturnat-billede.jpg" alt="Naturnat" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" data-i18n="projects.nature.title">Naturnat Hjemmeside - 2 semester</h3>
+                <p class="card__desc" data-i18n="projects.nature.desc">Webdesign med Bootstrap og JavaScript integration</p>
+                <div class="card__actions">
+                  <a class="btn btn--sm btn--ghost" href="https://persianhosting.dk/flow-3-projekt/index.html" aria-label="Åbn komponentgalleri" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projektkort eksempel 3 -->
+            <article class="card project" tabindex="0">
+              <div class="card__media">
+                <img src="img/kode-img.jpg" alt="Eksamensprojekt" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" data-i18n="projects.exam.title">Eksamensprojekt - 2 semester</h3>
+                <p class="card__desc" data-i18n="projects.exam.desc">Jeres produkt er en webbaseret multimedieproduktion (website, web-app)</p>
+                <div class="card__actions">
+                  <a class="btn btn--sm btn--secondary" href="2-sem-afl.pdf" aria-label="Se detaljer for Eksamensprojekt" target="_blank" rel="noopener noreferrer" data-i18n="projects.details">Detaljer</a>
+                  <a class="btn btn--sm btn--ghost" href="https://persianhosting.dk/2%20semester%20eksamen/index.html" aria-label="Åbn SPA-demo" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projektkort eksempel 4 -->
+            <article class="card project" tabindex="0">
+              <div class="card__media">
+                <img src="img/twitter-img.jpg" alt="Case: Brand & identitet" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title" data-i18n="projects.twitter.title">Pipper (x) Projekt - 3 semester</h3>
+                <p class="card__desc" data-i18n="projects.twitter.desc">Det bliver en meget simplificeret udgave af X, men forhåbentligt kan i komme i mål med et produkt, som minder bare lidt om det rigtige X.</p>
+                <div class="card__actions">
+                  <a class="btn btn--sm btn--ghost" href="#" aria-label="Åbn styleguide" target="_blank" rel="noopener noreferrer" data-i18n="projects.demo">Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Om mig sektion -->
+      <section class="section section--alt" id="about" aria-label="Om mig">
+        <div class="container about__inner">
+          <div class="about__content">
+            <header class="section__header">
+              <h2 data-i18n="about.title">Om mig</h2>
+              <p data-i18n="about.subtitle">Kompetencer, erfaring og mål</p>
+            </header>
+            <p data-i18n="about.body">
+              Jeg er multimediedesign-studerende med passion for frontend-udvikling. Jeg arbejder med moderne
+              teknologier og designmetoder for at skabe intuitive, hurtige og tilgængelige løsninger. Mine interesser
+              ligger i frontend-udvikling, UI/UX design og prototyping.
+            </p>
+            <ul class="about__list">
+              <li><strong data-i18n="about.skills.label">Kompetencer:</strong> <span data-i18n="about.skills.value">HTML, CSS, JavaScript, UI/UX, prototyping</span></li>
+              <li><strong data-i18n="about.tools.label">Værktøjer:</strong> <span data-i18n="about.tools.value">Figma, Git/GitHub, Adobe, Office package</span></li>
+              <li><strong data-i18n="about.goals.label">Mål:</strong> <span data-i18n="about.goals.value">Top-up i webudvikling, fordybelse i frontend-udvikling</span></li>
+            </ul>
+          </div>
+          <div class="about__visual">
+            <div class="about__cloud" id="aboutCloud" aria-label="Kompetencer, værktøjer og mål"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Kontakt sektion -->
+      <section class="section" id="contact" aria-label="Kontakt">
+        <div class="container contact__inner">
+          <header class="section__header">
+            <h2 data-i18n="contact.title">Kontaktinformation</h2>
+            <p data-i18n="contact.subtitle">Jeg er altid åben for nye muligheder og spændende projekter. Tag endelig kontakt – jeg svarer typisk inden for 24 timer.</p>
+          </header>
+          <div class="contact__panels">
+            <div class="contact__row">
+              <div class="panel" role="group" aria-label="Email">
+                <div class="panel__icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="panel__label" data-i18n="contact.email.label">Email</div>
+                  <div class="panel__value">persianmoradi5@gmail.com</div>
+                </div>
+              </div>
+              <div class="panel" role="group" aria-label="Telefon">
+                <div class="panel__icon" aria-hidden="true">📞</div>
+                <div>
+                  <div class="panel__label" data-i18n="contact.phone.label">Telefon</div>
+                  <div class="panel__value">+45 60 21 73 39</div>
+                </div>
+              </div>
+              <div class="panel" role="group" aria-label="Lokation">
+                <div class="panel__icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="panel__label" data-i18n="contact.location.label">Lokation</div>
+                  <div class="panel__value" data-i18n="contact.location.value">København, Danmark</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel--cta">
+              <div class="panel__title" data-i18n="contact.cta.title">Klar til at samarbejde?</div>
+              <div class="panel__desc" data-i18n="contact.cta.desc">Download mit CV eller ring uformelt for at diskutere muligheder.</div>
+              <div class="panel__actions">
+                <a class="btn btn--primary" href="persian.cv.pdf" download target="_blank" rel="noopener noreferrer" data-i18n="contact.cta.download">Download CV</a>
+                <a class="btn btn--ghost" href="mailto:persianmoradi5@gmail.com" data-i18n="contact.cta.email">Kontakt mig</a>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <!-- Scroll til top knap -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll til top" title="Scroll til top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    </button>
+
+    <footer class="footer" aria-label="Sidefod">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> <span data-i18n="footer.name">Persian Moradi</span>. <span data-i18n="footer.rights">Alle rettigheder forbeholdes.</span></p>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/persian-moradi-30769a337/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:persianmoradi5@gmail.com" aria-label="Email" data-i18n="footer.email">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- GSAP fra CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-Vl7eJ1N3o8yKxF+3+Jw5oH2K2Q5rF9K8iXn1kzXlNqfvu8uJ1K0JqP6q9Hn3pGzZl3Tt6cG3m3k1S7u2P7d6Ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-9v8v8Z9kq7R8HqX+2v2Z+f+Hc5Tg0r7H2u7Ck1c0Zl2Q7w9E4Vw7C2f2qzH6i8K5H0u9m0j3g5b4Zc6Z9p4qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
